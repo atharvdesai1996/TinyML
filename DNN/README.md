@@ -20,6 +20,39 @@ function** (e.g. ReLU), and passes the result forward. During training,
 
 ---
 
+## What is ReLU?
+
+**ReLU** stands for **Rectified Linear Unit**. It is the most common activation function in modern neural networks.
+
+**Definition:**
+
+    f(x) = max(0, x)
+
+This means:
+- Negative values become 0
+- Positive values stay the same
+
+**Why use ReLU?**
+- It introduces non-linearity, allowing the network to learn complex patterns (not just lines).
+- It acts as a signal filter: only strong (positive) signals pass through, weak/negative ones are blocked.
+
+**Sensor analogy:**
+Imagine each neuron is a sensor. If the signal is negative (weak or noise), ReLU blocks it (outputs 0). If the signal is positive (strong), it passes through. This makes the network focus on useful features and ignore noise.
+
+**In code:**
+```python
+Dense(20, activation=tf.nn.relu)
+```
+Each neuron's output is passed through ReLU before moving to the next layer.
+
+**Limitation:**
+If a neuron always outputs negative values, it will always be zero after ReLU (a "dead neuron").
+
+**Bottom line:**
+ReLU makes learning efficient, keeps only useful signals, and enables deep networks to learn complex data.
+
+---
+
 ## Dataset — Fashion MNIST
 
 - **60 000** training images, **10 000** test images
