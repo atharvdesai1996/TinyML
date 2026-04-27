@@ -1,5 +1,7 @@
 # Convolutions and Pooling — TinyML Assignment
 
+![CNN Architecture for Fashion-MNIST Classification](cnn_architecture.png)
+
 This assignment demonstrates the basics of **convolutions** and **pooling** in image processing, which are foundational concepts for Convolutional Neural Networks (CNNs).
 
 ---
