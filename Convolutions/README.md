@@ -40,3 +40,29 @@ Convolutions/
 ├── convolutions_and_pooling.py   # The assignment script
 └── README.md                     # This file
 ```
+
+---
+
+## Visualizing Convolutions and Pooling
+
+The script `visualize_conv_pooling.py` lets you see what the convolution and pooling layers are actually doing to your images. It shows the activations (feature maps) for selected images and filters, helping you understand what features the model is learning.
+
+- The script selects three images (e.g., all shoes) and visualizes the output of the first convolution and pooling layers for a specific filter.
+- The output shape like `(1, 26, 26, 32)` means:
+  - 1: batch size (one image)
+  - 26 × 26: spatial size after convolution
+  - 32: number of filters (feature maps)
+- You can change `CONVOLUTION_NUMBER` to see different filters.
+
+### What is `cmap='inferno'`?
+- `cmap` stands for colormap. `'inferno'` is a visually striking color map that highlights differences in activation values, making patterns easier to see than plain grayscale.
+- Brighter colors = higher activation (stronger feature detected).
+
+### What is ReLU?
+- **ReLU** (Rectified Linear Unit) is an activation function: `f(x) = max(0, x)`.
+- It keeps only positive signals, making the network focus on strong features and ignore weak/negative ones.
+- ReLU introduces non-linearity, allowing the network to learn complex patterns, not just straight lines.
+
+---
+
+**Try running the script and explore how different filters and layers highlight different features in your images!**
