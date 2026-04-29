@@ -66,3 +66,63 @@ The script `visualize_conv_pooling.py` lets you see what the convolution and poo
 ---
 
 **Try running the script and explore how different filters and layers highlight different features in your images!**
+
+---
+
+## CNN: Feature Extractor vs Classifier
+
+**Big picture:**
+- Feature extractor → finds patterns (Conv + Pool)
+- Classifier → makes the decision (Dense)
+
+### Real-world analogy: Sorting fruits 
+- Feature extraction: Vision system detects color, shape, texture (not the fruit name)
+- Classification: Decision system uses those features to decide: apple, banana, orange
+
+### In neural networks:
+- **Feature extractor:**
+  - Conv2D → detects small patterns (edges, curves, colors)
+  - MaxPooling → compresses, keeps important signals
+  - Output: feature maps (e.g., edge detected here)
+- **Classifier:**
+  - Dense layers → combine features, output class probabilities
+  - Output: final decision (e.g., 'cat', 'dog', ...)
+
+### Example model structure
+```python
+model = tf.keras.Sequential([
+    # Feature extractor
+    tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(32,32,3)),
+    tf.keras.layers.MaxPooling2D((2,2)),
+    tf.keras.layers.Conv2D(64, (3,3), activation='relu'),
+    tf.keras.layers.MaxPooling2D((2,2)),
+    # Convert to vector
+    tf.keras.layers.Flatten(),
+    # Classifier
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+```
+
+### When to use Conv vs Dense
+- Use **Conv** layers for data with spatial structure (images, audio spectrograms, video)
+- Use **Dense** layers when you already have features (after Conv, tabular data, final decision)
+
+### Why not only Dense for images?
+- Dense alone loses pixel relationships (spatial meaning)
+- Conv layers preserve and understand local patterns and positions
+
+### Why not only Conv?
+- Conv extracts features, but Dense layers combine all features into a final decision
+
+### Embedded/Edge devices
+- Conv layers: efficient, good for hardware
+- Dense layers: expensive, high memory
+- Prefer Conv-heavy, Dense-light models for embedded systems
+
+**Bottom line:**
+- Conv = extract features from structured data
+- Pool = reduce size, keep important info
+- Dense = combine features to make decisions
+
+If you don’t separate these roles clearly, model design will always feel random.
