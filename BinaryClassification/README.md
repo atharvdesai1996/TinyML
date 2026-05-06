@@ -31,6 +31,7 @@ This assignment demonstrates how to build a binary image classifier using convol
   model.compile(optimizer=optimizer, ...)
   ```
 
+Some other examples: https://musstafa0804.medium.com/optimizers-in-deep-learning-7bf81fed78a0
 ---
 
 ## Workflow
