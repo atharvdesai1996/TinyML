@@ -240,14 +240,13 @@ MFCCs (first 13-40 coefficients)
 
 ---
 
-## 🎓 Key Takeaways
+## Key Takeaways
 
-### What You Learned:
-1. ✅ How audio is represented digitally
-2. ✅ Different ways to transform audio for ML
-3. ✅ Why MFCC is optimal for speech recognition
-4. ✅ How to collect and preprocess audio data
-5. ✅ The importance of volume invariance
+1.  How audio is represented digitally
+2.  Different ways to transform audio for ML
+3.  Why MFCC is optimal for speech recognition
+4.  How to collect and preprocess audio data
+5.  The importance of volume invariance
 
 ### Why It Matters:
 - **Foundation for all audio ML**: Understanding these concepts is crucial
