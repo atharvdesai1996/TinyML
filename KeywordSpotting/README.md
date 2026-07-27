@@ -18,6 +18,11 @@ This directory contains assignments and tutorials for building keyword spotting 
 - **Always-On**: Minimal power consumption
 - **Offline**: Works without internet connectivity
 
+### KWS Pipeline Overview
+
+![KWS Steps Overview](KWS_steps_overview.png)
+
+
 ---
 
 ## Contents
