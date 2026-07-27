@@ -65,7 +65,8 @@ This assignment introduces the foundational concepts of audio signal processing 
 
 ### 1. Time Domain (Waveform)
 
-![Time Domain Example](time_domain_waveforms.png)
+<img width="1489" height="998" alt="image" src="https://github.com/user-attachments/assets/14c7ae20-b0c4-427e-bab7-cd033d05346f" />
+
 
 **What it shows**: Raw audio amplitude over time
 
@@ -81,7 +82,8 @@ This assignment introduces the foundational concepts of audio signal processing 
 
 ### 2. Frequency Domain (FFT)
 
-![Frequency Domain Example](frequency_domain_fft.png)
+<img width="1496" height="1040" alt="image" src="https://github.com/user-attachments/assets/7793a138-8b1a-421f-b52e-aa0a81af00c0" />
+
 
 **What it shows**: Which frequencies are present in the audio
 
@@ -113,7 +115,8 @@ This assignment introduces the foundational concepts of audio signal processing 
 
 ### 3. Spectrogram (Time-Frequency)
 
-![Spectrogram Example](spectrograms.png)
+<img width="1453" height="998" alt="image" src="https://github.com/user-attachments/assets/df937bbd-fdb1-4396-b688-6ab5918112e2" />
+
 
 **What it shows**: How frequency content changes over time (2D image)
 
@@ -149,7 +152,8 @@ This assignment introduces the foundational concepts of audio signal processing 
 
 ### 4. MFCC (Mel-Frequency Cepstral Coefficients) 
 
-![MFCC Example](mfcc_analysis.png)
+<img width="1451" height="998" alt="image" src="https://github.com/user-attachments/assets/8d3a610f-6272-4722-ba54-2a8d52b43132" />
+
 
 **What it shows**: Perceptually-motivated compact representation of audio
 
@@ -245,14 +249,13 @@ MFCCs (first 13-40 coefficients)
 
 ---
 
-## 🎓 Key Takeaways
+## Key Takeaways
 
-### What You Learned:
-1. ✅ How audio is represented digitally
-2. ✅ Different ways to transform audio for ML
-3. ✅ Why MFCC is optimal for speech recognition
-4. ✅ How to collect and preprocess audio data
-5. ✅ The importance of volume invariance
+1.  How audio is represented digitally
+2.  Different ways to transform audio for ML
+3.  Why MFCC is optimal for speech recognition
+4.  How to collect and preprocess audio data
+5.  The importance of volume invariance
 
 ### Why It Matters:
 - **Foundation for all audio ML**: Understanding these concepts is crucial
